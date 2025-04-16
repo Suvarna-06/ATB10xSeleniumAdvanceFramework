@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/ASUS/IdeaProjects/ATB10xSeleniumAdvanceFramework"><classes><class name="org.example.tests.pom.TestVWOLogin_01_NormalScript"><methods><include name="test_negative_vwo_login"/></methods></class></classes></test></suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/ASUS/IdeaProjects/ATB10xSeleniumAdvanceFramework">
+        <classes><class name="org.example.tests.pom.TestVWOLogin_01_NormalScript">
+            <methods><include name="test_negative_vwo_login"/></methods>
+        </class></classes></test></suite>

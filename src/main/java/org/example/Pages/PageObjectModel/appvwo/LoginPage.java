@@ -33,27 +33,27 @@ public class LoginPage {
     // Creating a Functions
 
 
-    public String LoginToVWOLoginInvalidCreds(String user, String pswd){
+    public String loginToVWOLoginInvalidCreds(String user, String pwd) {
 
         driver.get("https://app.vwo.com");
         driver.findElement(username).sendKeys(user);
-        driver.findElement(password).sendKeys(pswd);
+        driver.findElement(password).sendKeys(pwd);
         driver.findElement(signButton).click();
 
-        // Expicit Wait
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(error_message));
+        // Wait - Thread sleep
+        WaitHelpers.waitJVM(5000);
+        // Wait - Explicit Wait
+//        WaitHelpers.checkVisibility(driver,error_message);
 
 
           // We will get error message
         String error_message_text = driver.findElement(error_message).getText();
         return error_message_text;
-
     }
-
-    public String LoginToVWOLoginValidCreds(String user, String pswd){
-        return null;
-    }
+//
+//    public String LoginToVWOLoginValidCreds(String user, String pswd){
+//        return null;
+//    }
 
 
 
