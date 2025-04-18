@@ -35,7 +35,7 @@
 ```bash
 mvn test -Dsurefire.suiteXmlFiles=testng.xml
 
-
+---
 
 🔄 CI/CD + Grid Integration Overview
 
