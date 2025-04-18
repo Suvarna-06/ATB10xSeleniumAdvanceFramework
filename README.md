@@ -35,8 +35,9 @@
 ```bash
 mvn test -Dsurefire.suiteXmlFiles=testng.xml
 
+
+
 🔄 CI/CD + Grid Integration Overview
 
-<img width="788" alt="CI/CD Integration" src="https://github.com/user-attachments/assets/79dc1b6d-8381-4532-9028-0851b5587f87" /> ```
-
+<img width="673" alt="image" src="https://github.com/user-attachments/assets/dd07df31-2a7d-4a75-88f2-6fa25de6990c" />
 
