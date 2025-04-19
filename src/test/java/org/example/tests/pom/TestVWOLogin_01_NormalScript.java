@@ -51,14 +51,14 @@ public class TestVWOLogin_01_NormalScript {
 
        //PAge Object Code
         LoginPage loginPage_VWO = new LoginPage(driver);
-        loginPage_VWO.loginToVWOLoginInvalidCreds("suvarna06@gmail.com","Sandhya@03062001");
+        loginPage_VWO.loginToVWOLoginInvalidCreds("contact+aug@thetestingacademy.com","TtxkgQ!s$rJBk85");
         DashBoardPage dashBoardPage = new DashBoardPage(driver);
         String usernameLoggedIn = dashBoardPage.loggedInUserName();
 
         // Assertion Code
         assertThat(usernameLoggedIn).isNotBlank().isNotNull().isNotEmpty();
-        Assert.assertEquals(usernameLoggedIn,"Sandhya Sankeshwar");
-
+        Assert.assertEquals(usernameLoggedIn,"Aman");
+        driver.quit();
 
     }
 
