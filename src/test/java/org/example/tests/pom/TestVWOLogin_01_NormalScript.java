@@ -1,6 +1,8 @@
 package org.example.tests.pom;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Owner;
+import org.example.Pages.PageObjectModel.appvwo.DashBoardPage;
 import org.example.Pages.PageObjectModel.appvwo.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -39,7 +41,26 @@ public class TestVWOLogin_01_NormalScript {
 
     }
 
+    @Owner("SANDHYA")
+    @Description("Verify that valid creds dashboard page is loaded")
+    @Test
+    public void testLoginPositiveVWO(){
 
+        // Driver Code
+        WebDriver driver = new EdgeDriver();
+
+       //PAge Object Code
+        LoginPage loginPage_VWO = new LoginPage(driver);
+        loginPage_VWO.loginToVWOLoginInvalidCreds("suvarna06@gmail.com","Sandhya@03062001");
+        DashBoardPage dashBoardPage = new DashBoardPage(driver);
+        String usernameLoggedIn = dashBoardPage.loggedInUserName();
+
+        // Assertion Code
+        assertThat(usernameLoggedIn).isNotBlank().isNotNull().isNotEmpty();
+        Assert.assertEquals(usernameLoggedIn,"Sandhya Sankeshwar");
+
+
+    }
 
 
 
