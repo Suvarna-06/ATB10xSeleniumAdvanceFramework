@@ -30,14 +30,17 @@
 
 <img width="718" alt="Selenium Framework Architecture" src="https://github.com/user-attachments/assets/db57c178-d359-470b-9aa2-d9f0a21825fa" />
 
-## 🏃 Run the Test Suite
 
-```bash
-mvn test -Dsurefire.suiteXmlFiles=testng.xml
 
----
 
 🔄 CI/CD + Grid Integration Overview
 
 <img width="673" alt="image" src="https://github.com/user-attachments/assets/dd07df31-2a7d-4a75-88f2-6fa25de6990c" />
 
+
+
+
+## 🏃 Run the Test Suite
+
+```bash
+mvn test -Dsurefire.suiteXmlFiles=testng.xml
