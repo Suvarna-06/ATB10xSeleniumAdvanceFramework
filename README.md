@@ -33,7 +33,9 @@
 
 
 
+
 🔄 CI/CD + Grid Integration Overview
+
 
 <img width="673" alt="image" src="https://github.com/user-attachments/assets/dd07df31-2a7d-4a75-88f2-6fa25de6990c" />
 
