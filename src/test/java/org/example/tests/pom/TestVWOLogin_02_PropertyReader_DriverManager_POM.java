@@ -3,12 +3,10 @@ package org.example.tests.pom;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import org.assertj.core.api.Assertions;
-import org.example.Pages.PageObjectModel.appvwo.DashBoardPage;
-import org.example.Pages.PageObjectModel.appvwo.LoginPage;
+import org.example.Pages.PageObjectModel.appvwo.Normal_POM.DashBoardPage;
+import org.example.Pages.PageObjectModel.appvwo.Normal_POM.LoginPage;
 import org.example.driver.DriverManager;
 import org.example.utils.PropertiesReader;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

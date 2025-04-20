@@ -1,13 +1,9 @@
-package org.example.Pages.PageObjectModel.appvwo;
+package org.example.Pages.PageObjectModel.appvwo.Normal_POM;
 
 
 import org.example.utils.WaitHelpers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 // Page Class
 public class LoginPage {
