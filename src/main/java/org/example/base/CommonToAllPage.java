@@ -20,6 +20,10 @@ public class CommonToAllPage {
         getDriver().get(PropertiesReader.readKey("url"));
     }
 
+    public void openOrangeHRMUrl(){
+        getDriver().get(PropertiesReader.readKey("ohr_url"));
+    }
+
     public void clickElement(By by) {
         getDriver().findElement(by).click();
     }
