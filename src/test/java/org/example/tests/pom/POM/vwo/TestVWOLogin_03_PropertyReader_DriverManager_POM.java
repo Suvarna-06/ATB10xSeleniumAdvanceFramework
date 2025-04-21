@@ -1,25 +1,24 @@
-package org.example.tests.pom;
+package org.example.tests.pom.POM.vwo;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import org.assertj.core.api.Assertions;
 import org.example.Pages.PageObjectModel.appvwo.Normal_POM.LoginPage;
-import org.example.Pages.PageObjectModel.appvwo.improved_POM.DashBoardPage;
-import org.example.base.CommonToAllTest;
 import org.example.driver.DriverManager;
 import org.example.utils.PropertiesReader;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.example.Pages.PageObjectModel.appvwo.improved_POM.*;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class TestVWOLogin_04_PropertyReader_DriverManager_POM_CommonToAll extends CommonToAllTest {
-
+public class TestVWOLogin_03_PropertyReader_DriverManager_POM {
     @Description("TC#1- Verify that with invalid email, pass, error message is shown on the app.vwo.com")
     @Test
     public void test_negative_vwo_login() throws Exception {
 
-
+        // Driver Manager Code -1
+        DriverManager.init();
 
         // Page Class Code (POM Code) -2
         LoginPage loginPage = new LoginPage(DriverManager.getDriver());
@@ -29,6 +28,7 @@ public class TestVWOLogin_04_PropertyReader_DriverManager_POM_CommonToAll extend
         assertThat(error_message).isNotBlank().isNotNull().isNotEmpty();
         Assert.assertEquals(error_message,PropertiesReader.readKey("error_message"));
 
+        DriverManager.getDriver().quit();
 
 
 
@@ -39,6 +39,7 @@ public class TestVWOLogin_04_PropertyReader_DriverManager_POM_CommonToAll extend
     @Test
     public void testLoginPositiveVWO(){
 
+        DriverManager.init();
 
 
         LoginPage loginPage_VWO = new LoginPage(DriverManager.getDriver());
@@ -50,17 +51,9 @@ public class TestVWOLogin_04_PropertyReader_DriverManager_POM_CommonToAll extend
         // Assertion Code
         Assertions.assertThat(usernameLoggedIn).isNotBlank().isNotNull().isNotEmpty();
         Assert.assertEquals(usernameLoggedIn,PropertiesReader.readKey("expected_username"));
+        DriverManager.getDriver().quit();
 
     }
-
-
-
-
-
-
-
-
-
 
 
 }
